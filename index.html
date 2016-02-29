@@ -1,276 +1,81 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>Miho Mitsueda</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript" src="jquery.pagepiling.js"></script>
-<script type="text/javascript">
-		$(document).ready(function() {
-			/*
-			* Plugin intialization
-			*/
-	    	$('#pagepiling').pagepiling({
-	          	direction: 'horizontal',
-	    		menu: '#menu',
-	    		anchors: ['page1', 'page2', 'page3', 'page4'],
-			    sectionsColor: ['white', '#ee005a', '#2C3E50', '#39C'],
-			    navigation: {
-			    	'position': 'right',
-			   		'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Pgae 4']
-			   	},
-			    afterRender: function(){
-			    	$('#pp-nav').addClass('custom');
-			    },
-			    afterLoad: function(anchorLink, index){
-			    	if(index>1){
-			    		$('#pp-nav').removeClass('custom');
-			    	}else{
-			    		$('#pp-nav').addClass('custom');
-			    	}
-			    }
-			});
-	    });
-    </script>
-
+  <meta charset="UTF-8">
+  <title>みほ　みつえだ</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
-	<ul id="menu">
-    <li data-menuanchor="page1" class="active"><a href="#page1">トップ</a></li>
-    <li data-menuanchor="page2"><a href="#page2">紹介</a></li>
-    <li data-menuanchor="page3"><a href="#page3">作品</a></li>
-    <li data-menuanchor="page4"><a href="#page4">コンタクト</a></li>
-  </ul>
-  
-  
-<div id="pagepiling">
-	    <div class="section" id="section1">
-	    	<img src="img/main.png" alt="miho" />
-			<br />
+  <div class="frame">
+    <span class="top"></span>
+    <span class="left"></span>
+    <span class="bottom"></span>
+    <span class="right"></span>
+  </div>
+  <div class="l-wrap">
+    <section id="home" class="l-section l-section-top">
+      <div class="l-container-center">
+        <h1 class="heading-top">PORTFOLIO</h1>
+        <div class="subtitle">DESIGN & CORDING</div>
+      </div>
+      <div class="arrow"></div>
+    </section>
+    <section id="about" class="l-section l-section">
+      <div class="l-container">
+      <h1 class="heading">ABOUT</h1>
+      <div class="image"><img src="assets/images/main.png" alt=""></div>
+      <p>はじめまして 光枝美穂です！</p>
+      <p>スキル</p>
+      <p>Photoshop　Illustrator HTML　　CSS
+Sass　　gulp/Grunt　WordPress　　JavaScript　WebGL　　PHP　　Ruby</p>
 
-    	  <h1>Miho Mitsueda</h1>
-		  <p>春夏秋冬がんばるWebデザイナーです</p>
-          <div class="back">111</div>
-
-	    </div>
-	    <div class="section" id="section2">
-	    	<div class="back2">
-                <!--<h2>はじめまして 光枝美穂です！</h2>
-	    		<p>だみーだみーダミー</p>
-                <h2>スキル</h2>
-                <ul class="skill"><li>Photoshop</li>
-<li>Illustrator</li>
-<li>HTML</li>
-<li>CSS</li>
-<li>Sass</li>
-<li>gulp/Grunt</li>
-<li>WordPress</li></ul>
-<ul class="skill"><li>JavaScript</li>
-<li>WebGL</li>
-<li>PHP</li>
-<li>Ruby</li></ul>
-<h2>タイムライン</h2>-->
-<div id="item01" class="anime"> <h2>はじめまして 光枝美穂です！</h2></div>
-<div id="item02" class="anime">だみーだみーダミー</div>
-<div id="item03" class="anime"> <h2>スキル</h2></div>
-<div id="item04" class="anime">Photoshop　Illustrator<br>　HTML　　CSS<br>
-Sass　　gulp/Grunt<br>WordPress　　JavaScript<br>WebGL　　PHP　　Ruby<br>
-</div>
-<div id="item05" class="anime"><h2>タイムライン</h2></div>
-<div id="item06" class="anime">1979年３月13日生まれ<br>2001年大学卒業<br>広告の営業をしながら、グラフィックデザイナーを目指す。<br>2007年南海電気鉄道株式会社にWebデザイナーとして入社</div>
-</div>
-<div id="item07" class="anime"><h3>おわり</h3></div>
-<div id="skipBtn" class="btn"><a href="#">SKIP</a></div>
-<div id="replayBtn" class="btn"><a href="#">REPLAY</a></div>
-</div>
-	    </div>
-	    <div class="section" id="section3">
-	    	<div class="back">
-            <h2>作品</h2>
-            <p><a href="#">すべて</a>　　<a href="#">Web</a>　　<a href="#">グラフィック</a></p>
-            <div class="sakuhin"><h3>南海電鉄 おでかけページ</h3><img src="img/s_1.jpg" alt="南海電鉄">
-            (※月1回更新)<br>
-            バナー制作<br>テキスト編集
-            </div>
-             <div class="sakuhin"><h3>natts net</h3><img src="img/s_2.jpg" alt="natts net">
-             (※月2回更新)<br>レイアウト編集<br>ワードプレス構築<br>バナー制作<br>テキスト編集
-             </div>
-              <div class="sakuhin"><h3>なにわやさかい</h3><img src="img/s_3.jpg" alt="なにわやさかい">(※不定期更新)<br>レイアウト編集<br>バナー制作<br>テキスト編集</div>
-            </div>
-	    </div>
-	     <div class="section" id="section4">
-	    	<div class="back"><h2>コンタクト</h2>
-           <form action="" method="post">
-    <input type="hidden" value="secret_data" />
-
-    <label>名前：<input type="text" name="login_name" /></label><br /><br />
-    <label>パスワード：<input type="password" name="password" /></label><br /><br />
-    <div>
-      <label>男<input type="radio" name="gender" value="man" /></label>
-      <label>女<input type="radio" name="gender" value="woman" /></label>
-    </div><br /><br />
-    <div>
-      <p>ご用件を選んでください。</p>
-      <label>用件1<input type="checkbox" name="hobby" value="1" /></label>
-      <label>用件2<input type="checkbox" name="hobby" value="2" /></label>
-      <label>用件3<input type="checkbox" name="hobby" value="3" /></label>
-    </div><br /><br />
-    <div>
-      <p>ご住所</p>
-      <select name="select1">
-        <option value="1">北海道</option>
-        <option value="2">東京都</option>
-        <option value="3">沖縄県</option>
-      </select>
-    </div><br /><br />
-    <div>
-      <p>お問い合わせ内容を400字以内で記述してください。</p>
-      <textarea name="opinion" cols="40" rows="10" maxlength="400"
-        placeholder="ご意見を入力してください。"></textarea>
-    </div><br /><br />
-    <input type="submit" value="送信" />
-  </form>
-            
-           
-	    	</div>
-	    </div>
-
-	</div>
-
-
+<p>タイムライン</p>
+      <p>1979年３月13日生まれ</p><p>2001年大学卒業<br>広告の営業をしながら、グラフィックデザイナーを目指す。</p>
+      <br>2007年南海電気鉄道株式会社にWebデザイナーとして入社</p>
+      </div>
+    </section>
+    <section id="works" class="l-section l-section">
+      <h1 class="heading">WORKS</h1>
+      <div class="l-container">
+        <div class="dammy"><span>Dammy</span></div>
+        <div class="dammy"><span>Dammy</span></div>
+        <div class="dammy"><span>Dammy</span></div>
+       
+      </div>
+    </section>
+    <section id="contact" class="l-section">
+      <h1 class="heading">CONTACT</h1>
+      <div class="l-container">
+        <form class="form" action="">
+          <input class="form-name" type="text" placeholder="Name">
+          <input class="form-mail" type="text" placeholder="Adress">
+          <textarea class="form-conten" name="content"></textarea>
+          <button class="form-button">SUBMIT</button>
+        </form>
+      </div>b   b   
+    </section>
+  </div>
+  <div class="menu" id="js-popout"></div>
+  <div class="panel" id="js-popout-panel">
+    <div class="panel-inner">
+      <nav class="l-nav">
+        <ul class="nav">
+          <li class="nav-item"><a href="#home">HOME</a></li>
+          <li class="nav-item"><a href="#about">ABOUT</a></li>
+          <li class="nav-item"><a href="#works">WORKS</a></li>
+          <li class="nav-item"><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+      <div class="close" id="js-popout-close"></div>
+    </div>
+  </div>
+  <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+  <![endif]-->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script type="text/javascript"> 
-$(function() {
-	
-	// 各要素を変数に指定します
-	var $item01 = $('#item01'),
-	    $item02 = $('#item02'),
-	    $item03 = $('#item03'),
-		$item04 = $('#item04'),
-		$item05 = $('#item05'),
-		$item06 = $('#item06'),
-		$item07 = $('#item07'),
-		
-		$last = $('#last'),
-	    $skip = $('#skipBtn');
-		$replay = $('#replayBtn');
-		showitem = {opacity:1,top:"-=5%"}; // 上に5%移動しながら表示
-		hideitem = {opacity:0,top:"-=10%"}; // 上に10%移動しながら非表示
-
-	// アニメーションの順番を設定
-    function playAnimation(){
-        animation01()
-            .then(animation02)
-		    .then(animation03)
-		    .then(animation04)
-			.then(animation05)
-			.then(animation06)
-			.then(animation07)
-			.then(animationlast)
-			
-    }
-	
-	// リプレイボタンを設定
-	$replay.on('click', function(){
-		onReplay();
-	});
-	
-	// リプレイ処理
-	function onReplay(){
-		$item01.stop(true, true).show().css({'top': 35 + "%"});
-		$item02.stop(true, true).show().css({'top': 50 + "%"});
-		$item03.stop(true, true).show().css({'top': 45 + "%"});
-		$item04.stop(true, true).show().css({'top': 25 + "%"});
-		$item05.stop(true, true).show().css({'top': 45 + "%"});
-		$item06.stop(true, true).show().css({'top': 40 + "%"});
-		$item07.stop(true, true).show().css({'top': 50 + "%"});
-		
-		$last.stop(true, true).show().css({'opacity': 0,'top' :45 + "%"});
-		$skip.stop(true, true).show();
-		$replay.stop(true, true).hide();
-		playAnimation();
-	}
-	
-	// スキップボタンを設定
-	$skip.on('click', function(){
-		onSkip();
-		return false;
-	});
-
-	// スキップ処理
-	function onSkip(){ 
-		$item01.stop(true, true).hide();
-		$item02.stop(true, true).hide();
-		$item03.stop(true, true).hide();
-		$item04.stop(true, true).hide();
-		$item05.stop(true, true).hide();
-		$item06.stop(true, true).hide();
-		$item07.stop(true, true).hide();
-		
-		$last.stop(true, true).css({'opacity': 1,'top' :40 + "%"});
-		$skip.stop(true, true).hide();
-		$replay.stop(true, true).show();
-	}		
-
-	// 各アニメーションを順番に記述します
-	function animation01() {
-		var d = new $.Deferred;
-		$item01.animate(showitem,2000, function(){d.resolve();});
-		return d.promise();
-	}
-	function animation02(){
-		var d = new $.Deferred;
-		$item01.animate(hideitem,1000),
-		$item02.delay(1000).animate(showitem,2000, function(){d.resolve();});
-		return d.promise();
-	}
-	function animation03(){
-		var d = new $.Deferred;
-		$item02.delay(500).animate(hideitem,1000),
-		$item03.delay(1000).animate(showitem,2000, function(){d.resolve();});
-		return d.promise();
-	}
-	function animation04(){
-		var d = new $.Deferred;
-		$item03.delay(500).animate(hideitem,1000),
-		$item04.delay(1000).animate(showitem,2000, function(){d.resolve();});
-		return d.promise();
-	}
-	function animation05(){
-		var d = new $.Deferred;
-		$item04.delay(500).animate(hideitem,1000),
-		$item05.delay(1000).animate(showitem,2000, function(){d.resolve();});
-		return d.promise();
-	}
-	function animation06(){
-		var d = new $.Deferred;
-		$item05.delay(500).animate(hideitem,1000),
-		$item06.delay(1000).animate(showitem,2000, function(){d.resolve();});
-		return d.promise();
-	}	
-	function animation07(){
-		var d = new $.Deferred;
-		$item06.delay(500).animate(hideitem,1000),
-		$item07.delay(1000).animate(showitem,2000, function(){d.resolve();});
-		return d.promise();
-	}
-	
-	function last(){
-		var d = new $.Deferred;
-		$last.delay(500).animate(showitem,2000),
-		$skip.hide(),
-		$replay.show(function(){d.resolve();});
-		return d.promise();
-	}	
-
-    // 実行
-    playAnimation();
-
-}());
-</script>
 </html>
