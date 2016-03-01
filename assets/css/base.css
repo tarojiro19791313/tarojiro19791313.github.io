@@ -2,8 +2,9 @@ body{
   color: #fff;
   font-size: 16px;
   line-height: 1.8;
-  font-family: 'Open Sans', sans-serif;
-  background: #A1C8D7;
+  font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", 
+  Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic",  'Open Sans', sans-serif;
+  background: #88BFB8;
 }
 
 .l-header{
@@ -189,3 +190,4 @@ body{
   border-bottom: none;
   border-right: 20px solid transparent;
 }
+.pink {color:#F16B6C;}
