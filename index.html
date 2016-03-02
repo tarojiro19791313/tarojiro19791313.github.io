@@ -9,6 +9,28 @@
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script>function smartRollover() {
+	if(document.getElementsByTagName) {
+		var images = document.getElementsByTagName("img");
+		for(var i=0; i < images.length; i++) {
+			if(images[i].getAttribute("src").match("_off."))
+			{
+				images[i].onmouseover = function() {
+					this.setAttribute("src", this.getAttribute("src").replace("_off.", "_on."));
+				}
+				images[i].onmouseout = function() {
+					this.setAttribute("src", this.getAttribute("src").replace("_on.", "_off."));
+				}
+			}
+		}
+	}
+}
+if(window.addEventListener) {
+	window.addEventListener("load", smartRollover, false);
+}
+else if(window.attachEvent) {
+	window.attachEvent("onload", smartRollover);
+}</script>
 </head>
 <body>
   <div class="frame">
@@ -29,7 +51,7 @@
       <div class="l-container">
       <h1 class="heading">ABOUT</h1>
       <div class="image"><a href="https://github.com/tarojiro19791313">
-      <img src="assets/images/main.png" alt="miho"></a></div>
+      <img src="assets/images/main_off.png" alt="miho"></a></div>
       <p class="pink">はじめまして 光枝美穂です！</p>
       <p class="pink">スキル</p>
       <p>Photoshop　Illustrator HTML　　CSS
@@ -37,7 +59,7 @@ Sass　　gulp/Grunt　WordPress　　JavaScript　WebGL　　PHP　　Ruby</p>
 
 <p class="pink">タイムライン</p>
       <p>1979年３月13日生まれ</p><p>2001年大学卒業<br>広告の営業をしながら、グラフィックデザイナーを目指す。</p>
-      <br>2007年南海電気鉄道株式会社にWebデザイナーとして入社</p>
+      <p>2007年南海電気鉄道株式会社にWebデザイナーとして入社</p>
       </div>
     </section>
     <section id="works" class="l-section l-section">
